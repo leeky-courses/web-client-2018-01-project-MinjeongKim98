@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Personal Color Page</title>
+<meta charset="UTF-8">
+<meta name="description" content="web client computing course code">
+<meta name="keywords" content="html,css,javascript,frontend">
+<meta name="author" content="Minjeong Kim">
+<style>
+body{
+  text-align: center;
+  margin:0;
+}
+.navbar{
+  text-align: center;
+  width: 100%;
+  background: black;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12)
+}
+nav{
+  position: fixed;
+  width: 100%;
+}
+ul{
+  text-align: left;
+  display: inline;
+  margin:0;
+  padding: 0;
+  list-style: none;
+}
+ul li{
+  font: bold 12px/18px sans-serif;
+  display: inline-block;
+  position: relative;
+  padding: 25px 20px;
+  background: #6699ccc;
+}
+ul li a{
+  text-decoration: none;
+  padding: 25px 20px;
+  color: white;
+  font-size: 18px;
+}
+ul li:hover{
+  background: red;
+  color: white;
+}
+ul li ul{
+  padding: 0;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 300px;
+  display: none;
+  visibility: hidden;
+}
+ul li ul li{
+  background: gray;
+  display: block;
+}
+ul li ul li:hover{
+  background: #gray;
+}
+ul li:hover ul{
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+ul ul li:hover li{
+  display: block;
+}
+
+.zindex{
+  position: relative;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 800px;
+  z-index: -1;
+}
+
+.wide{
+  margin: 10% 0;
+}
+
+h1{
+  font-size: 35px;
+  font-style: italic;
+}
+h1::before{
+  content: url(index.jpeg);
+  display: inline-block;
+}
+h1::after{
+  content: url(index.jpeg);
+}
+ol li{
+  list-style-position: inside;
+  font-size: 25px;
+}
+
+p{
+  padding: 10px 0;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+.tl{
+  background-color: yellow;
+}
+.tl:hover{
+  background-color: green;
+}
+.tl2{
+  background-color: ivory;
+}
+.tl2:hover{
+  background-color: beige;
+}
+.wm{
+  background-color: pink;
+}
+.cl{
+  background-color: blue;
+}
+
+
+input[type=text]{
+  width: 40%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+input[type=text]:focus{
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+</style>
+</head>
+
+<body>
+  <nav>
+  <div class="navbar">
+    <ul>
+      <li><a href="#">About&nbsp&#8681</a>
+        <ul>
+          <li><a href="#page">I.페이지 소개</a></li>
+          <li><a href="#personal">II.Personal Color란?</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Check&nbsp&#8681</a>
+        <ul>
+          <li><a href="#check">I.Personal Color 검사</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Personal Color</a></li>
+      <li><a href="#">Recommend&nbsp&#8681</a>
+        <ul>
+            <li><a href="#clothes">I.Clothes</a></li>
+            <li><a href="#cosmetics">II.Cosmetics</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Information&nbsp&#8681</a>
+        <ul>
+          <li><a href="#ask">I.문의사항</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </nav>
+
+  <img class="zindex" src=images.jpeg>
+<section>
+  <h1>About</h1>
+    <ol type="I">
+      <div class="wide">
+      <li id="page">페이지 소개</li>
+        <p>이 홈페이지는 <strong>Personal color</strong>가 무엇인지 소개합니다.<br>
+      	원하신다면 personal color 진단을 하실 수 있으며 본인의 personal color에 따라 어울리는 옷을 추천받으실 수 있습니다.<br>
+      	문의사항이 있으시면 <em>information</em> 버튼을 누르신 후 <em>문의사항</em>에 남겨주시면 됩니다.<br></P>
+      </div>
+      <div class="wide">
+      <li id="personal">Personal Color란?</li>
+        <p>Personal Color란 자신에게 가장 잘 어울리는 말을 뜻한다.<br>
+          크게 Wram type과 Cool type으로 나뉘며 다시 봄/여름/가을/겨울 type으로 나뉜다.</br>
+          피부, 머리카락, 눈동자, 두피, 손목 색으로 컬러 유행에 따라 고유의 색을 분석하여 Best, Basic, Worst color로 구분한다.<br>
+          다음은 personal color에 관한 동영상이다.<br>
+          <video width="750" height="500" controls>
+            <source src="movie.mp4" type="video/mp4">
+          </video>
+        </p>
+      </div>
+      </ol>
+</section>
+
+<section>
+  <h1>Check</h1>
+    <ol type="I">
+      <div class="wide">
+      <li id="check">Personal Color 검사</li><br>
+        <br>*본인의 personal color는 어디에 해당하는지 확인해 보세요!*<br><br>
+
+        <img src="warm1.jpeg" onmouseover="this.src='cool1.jpeg';" onmouseout="this.src='warm1.jpeg';" width="200px" height="300px" alt="WARM/COOL" title="1">
+        <img src="warm2.jpeg" onmouseover="this.src='cool2.jpeg';" onmouseout="this.src='warm2.jpeg';" width="200px" height="300px" alt="WARM/COOL" title="2">
+        <img src="warm3.jpeg" onmouseover="this.src='cool3.jpeg';" onmouseout="this.src='warm3.jpeg';" width="200px" height="300px" alt="WARM/COOL" title="3">
+        <img src="warm4.jpeg" onmouseover="this.src='cool4.jpeg';" onmouseout="this.src='warm4.jpeg';" width="200px" height="300px" alt="WARM/COOL" title="4"><br>
+      마우스를 올리기 전의 색이 더 잘 어울리면 warm톤, 그렇지 않다면 cool톤 입니다<br><br>
+       더욱 구체적인 결과를 알고 싶다면 계절별 personal color도 확인해 볼까요?<br>
+      <img src="season.jpeg" width="800px" height="300px" alt="SEASON" title="season">
+    </div>
+    </ol>
+</section>
+
+<section>
+  <h1>Recommend</h1>
+    <ol type="I">
+      <div class="wide">
+      <li id="clothes">Clothes</li>
+      <table border="1" style="margin-left: auto; margin-right: auto; text-align:center;">
+      <caption>Personal Color Clothes</caption><br>
+        <th colspan="2" class="tl">Warm</th>
+        <th colspan="2" class="tl2">Cool</th>
+      </tr>
+      <tr>
+        <td class="wm"><a href="https://blog.naver.com/romanticroem/220909477344" target="_blank">Spring</a></td>
+        <td class="wm"><a href="https://blog.naver.com/romanticroem/220909477344" target="_blank">Summer</a></td>
+        <td class="cl"><a href="https://blog.naver.com/romanticroem/220909477344" target="_blank">Autumn</a></td>
+        <td class="cl"><a href="https://blog.naver.com/romanticroem/220909477344" target="_blank">Winter</a></td>
+      </tr>
+    </table>
+  </div>
+  <div class="wide">
+      <li id="cosmetics">Cosmetics</li>
+      <table border="1" style="margin-left: auto; margin-right: auto; text-align: center;">
+      <caption>Personal Color Cosmetics</caption><br>
+      <tr>
+        <th colspan="2" class="tl">Warm</th>
+        <th colspan="2" class="tl2">Cool</th>
+      </tr>
+      <tr>
+        <td class="wm"><a href="http://www.vivlasmall.com/product/list.html?cate_no=44" target="_blank">Spring</a></td>
+        <td class="wm"><a href="http://www.vivlasmall.com/product/list.html?cate_no=44" target="_blank">Summer</a></td>
+        <td class="cl"><a href="http://www.vivlasmall.com/product/list.html?cate_no=43" target="_blank">Autumn</a></td>
+        <td class="cl"><a href="http://www.vivlasmall.com/product/list.html?cate_no=43" target="_blank">Winter</a></td>
+      </tr>
+    </table>
+  </div>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <h1>Information</h1>
+    <ol type="I">
+    <div class="wide">
+      <li id="ask">문의사항</li>
+        <form>
+          name: <input type="text" name="myname" placeholder="type your name" autocomplete=""><br><br>
+          phone: <input type="tel" name="myphone" maxlength="13" placeholder="000-0000-0000" autocomplete=""><br><br>
+          잘못된 정보 <input type="radio" name="info"><br>
+          궁금한 정보 <input type="radio" name="info"><br>
+          기타 <input type="radio" name="info"><br><br>
+          문의 내용: <input type="text" name="ask" maxlength="300"><br><br>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button><br><br>
+        </form>
+      </div>
+    </ol>
+</section>
+
+<details open>
+  <summary>출처</summary>
+  사진1: www.colorstylepdx.com<br>
+  사진2: https://www.fiftyflowers.com/product/salmon-dahlia-flower.htm<br>
+  진단 사진: http://blog.naver.com/PostView.nhn?blogId=mikimotolady&logNo=220514282085<br>
+  동영상: http://youtube.com/watch?v=58K9C5-nCy8
+</details>
+</body>
+</html>
