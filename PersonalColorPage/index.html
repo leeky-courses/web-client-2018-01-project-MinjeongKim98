@@ -1,12 +1,25 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Personal Color Page</title>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script type="text/javascript" src="PersonalColor.js"></script>
 <meta charset="UTF-8">
 <meta name="description" content="web client computing course code">
 <meta name="keywords" content="html,css,javascript,frontend">
 <meta name="author" content="Minjeong Kim">
 <style>
+#panel, #flip {
+	padding: 5px;
+	text-align: center;
+	background-color: red;
+	border: solid 1px #c3c3c3;
+}
+#panel {
+	padding: 50px;
+	display: none;
+}
 body{
   text-align: center;
   margin:0;
@@ -69,7 +82,6 @@ ul li:hover ul{
 ul ul li:hover li{
   display: block;
 }
-
 .zindex{
   position: relative;
   left: 0;
@@ -78,11 +90,9 @@ ul ul li:hover li{
   height: 800px;
   z-index: -1;
 }
-
 .wide{
   margin: 10% 0;
 }
-
 h1{
   font-size: 35px;
   font-style: italic;
@@ -98,11 +108,9 @@ ol li{
   list-style-position: inside;
   font-size: 25px;
 }
-
 p{
   padding: 10px 0;
 }
-
 a{
   text-decoration: none;
   color: white;
@@ -125,8 +133,14 @@ a{
 .cl{
   background-color: blue;
 }
-
-
+.box {
+      border:1px solid #555;
+      color:white;
+      background:#555;
+      height:105px;
+      width:260px;
+      position: relative;
+    }
 input[type=text]{
   width: 40%;
   border: 2px solid #aaa;
@@ -141,7 +155,6 @@ input[type=text]:focus{
   border-color: dodgerBlue;
   box-shadow: 0 0 8px 0 dodgerBlue;
 }
-
 </style>
 </head>
 
@@ -182,7 +195,7 @@ input[type=text]:focus{
     <ol type="I">
       <div class="wide">
       <li id="page">페이지 소개</li>
-        <p>이 홈페이지는 <strong>Personal color</strong>가 무엇인지 소개합니다.<br>
+        <p>이 홈페이지는 <button id = "animate">personal color</button>(버튼을 눌러보세요!)<div id="animate-demo" class="box">Personal Color</div>가 무엇인지 소개합니다.<br>
       	원하신다면 personal color 진단을 하실 수 있으며 본인의 personal color에 따라 어울리는 옷을 추천받으실 수 있습니다.<br>
       	문의사항이 있으시면 <em>information</em> 버튼을 누르신 후 <em>문의사항</em>에 남겨주시면 됩니다.<br></P>
       </div>
@@ -213,7 +226,8 @@ input[type=text]:focus{
         <img src="warm4.jpeg" onmouseover="this.src='cool4.jpeg';" onmouseout="this.src='warm4.jpeg';" width="200px" height="300px" alt="WARM/COOL" title="4"><br>
       마우스를 올리기 전의 색이 더 잘 어울리면 warm톤, 그렇지 않다면 cool톤 입니다<br><br>
        더욱 구체적인 결과를 알고 싶다면 계절별 personal color도 확인해 볼까요?<br>
-      <img src="season.jpeg" width="800px" height="300px" alt="SEASON" title="season">
+			 <div id="flip">Click here to see season Personal Color</div>
+			 <div id="panel"><img src="season.jpg"></div>
     </div>
     </ol>
 </section>
@@ -237,6 +251,11 @@ input[type=text]:focus{
     </table>
     <br>spring/summer/autumn/winter 중 하나를 선택하시면 해당 계절에 해당하는 옷을 추천헤주는 곳으로 이동합니다.
   </div>
+	<div id="cl1"><img src="img1.jpeg"></div>
+	<div id="co1"><img src="cos1.jpeg"></div>
+	<div id="cl2"><img src="im2.jpeg"></div>
+	<div id="co2"><img src="cos2.jpeg"></div>
+
   <div class="wide">
       <li id="cosmetics">Cosmetics</li>
       <table border="1" style="margin-left: auto; margin-right: auto; text-align: center;">
